@@ -7,7 +7,6 @@ void print_lower(const std::string& s);
 void print_upper(const std::string& s);
 
 static std::string to_upper(const std::string& os){
-  //extern int n; 
   ++n;
   auto s = os;
   std::transform(s.begin(), s.end(), s.begin(), toupper);
@@ -21,4 +20,3 @@ static std::string to_lower(const std::string& os){
   std::transform(s.begin(), s.end(), s.begin(), tolower);
   return s;
 }
-
