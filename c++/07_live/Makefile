@@ -29,4 +29,3 @@ clean:
 	rm -f $(EXE) *~ *.txt
 
 .PHONY: clean
-

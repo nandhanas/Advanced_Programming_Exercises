@@ -1,9 +1,7 @@
 EXE = exe
-
 LFLAGS = -lblass
 CXX = c++
-CXXFLAGS = -I include -std=c++11
-
+CXXFLAGS = -Iinclude -std=c++11
 SRC = src/src1.cc src/src2.cc main.cc
 OBJ = ${SRC:.cc=.o}
 
@@ -13,7 +11,7 @@ all: $(EXE)
 	$(CXX) -c $< -o $@ $(CXXFLAGS)
 
 
-$(EXE): $(OBJ)
+$(EXE): $(OBJ) $(HEADER)
 	$(CXX) $^ -o $(EXE)
 
 
@@ -26,5 +24,3 @@ clean:
 	rm -rf src/*.o main.o $(EXE) */*~ *~
 
 .PHONY: clean all
-
-

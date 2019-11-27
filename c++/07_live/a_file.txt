@@ -1,4 +1,0 @@
-Hello World!
-a = 7
-d = 9.9
-Another line!

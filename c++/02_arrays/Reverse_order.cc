@@ -3,7 +3,6 @@ using namespace std;
 
 template <typename T>
 T* initialize(T* a, size_t n) {
-  cout<<"Enter the elements of the array"<<endl;
   for (std::size_t i{0}; i < n; ++i)
     cin>>a[i];
   return a;
@@ -27,9 +26,13 @@ int main() {
   cout<<"Enter the size of the array"<<endl;
   size_t n;
   cin>>n;
-  auto* array=new double[n];
-  array = initialize(array,n);
-  reverse_order(array,n);
+  auto* array_double=new double[n];
+  cout<<"Enter the elements of the double array"<<endl;
+  array_double = initialize(array_double,n);
+  reverse_order(array_double,n);
+  auto* array_int=new int[n];
+  cout<<"Enter the elements of the int array"<<endl;
+  array_int = initialize(array_int,n);
+  reverse_order(array_int,n);
   return 0;
 }
-
